@@ -1,5 +1,6 @@
 import "./Contact.css";
 
+//On peut mettre export default Contact; en fin de script à la place aussi
 export default function Contact(props) {
   const statusClass = props.isConnected ? "online" : "offline"; //On regarde si isConnected est en true ou false lors de l'appel de Contact dans App.jsx (isConnected est un argument). Si true, on lui mets une classe inline et la pastille sera verte. False = pastille grise.
   return ( // Le html que va retourner la fonction
