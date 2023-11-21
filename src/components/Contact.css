@@ -1,0 +1,41 @@
+.profile-container {
+  text-align: center;
+  margin: 1rem;
+  max-width: min-content; /* Pour que le composant entier ne s'étale pas + en largeur selon la longueur du nom */
+}
+
+.profile-img-container { /* Contient l'image et le statut de connexion */
+  position: relative; /* Pour que la pastille de statut se positionne selon ce containeur */
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100%; /* Pour que l'image fasse la taille de son conteneur */
+  height: 100%; /* Pour que l'image fasse la taille de son conteneur */
+}
+
+/* Position et apparence de l'indicateur de statut */
+.status-indicator {
+  position: absolute; /* Sa position est absolue par rapport à .profile-img-container qui est son plus proche parent avec position relative */
+  bottom: 0px;
+  right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.online {
+  background-color: #46a049; /* Vert si isConnected = true, donc si utilisateur connecté */
+}
+
+.offline {
+  background-color: #858484; /* Gris si isConnected = false, donc si utilisateur non connecté */
+}
+
+.profile-name p {
+  margin: 5px 0 0 0;
+}

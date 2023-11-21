@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import {useState} from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import Contact from "./components/Contact.jsx";
+import "./App.css";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -17,20 +17,27 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <h2>La version actuelle de React est : 18.2.0</h2>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        {/* On appelle plsuieurs fois notre composant avec différents paramètres/props */}
+        <Contact
+          name="Molag Bal"
+          image="./public/thispersondoesnotexist.jpg"
+          isConnected={true}
+        />
+        <Contact
+          name="Méhrunes Dagon"
+          image="./public/thispersondoesnotexist3.jpg"
+          isConnected={false}
+        />
+        <Contact
+          name="Hermaeus Mora"
+          image="./public/thispersondoesnotexist2.jpg"
+          isConnected={true}
+        />
       </div>
-      <p className="read-the-docs">
-        React est une bibliothèque
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
